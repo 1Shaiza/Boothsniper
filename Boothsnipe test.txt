@@ -188,6 +188,10 @@ local function checklisting(uid, gems, item, version, shiny, amount, username, p
     elseif class == "Egg" and gems <= 10000 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	  processListingInfo(uid, gems, item, version, shiny, amount, username)
+
+    elseif item == "Charm Stone" and gems <= 150000 then
+        game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
+	  processListingInfo(uid, gems, item, version, shiny, amount, username)
     
     end
 end
