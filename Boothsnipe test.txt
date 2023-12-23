@@ -141,11 +141,11 @@ local function checklisting(uid, gems, item, version, shiny, amount, username, p
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	    processListingInfo(uid, gems, item, version, shiny, amount, username)
  
-    elseif item == "Large Christmas Present" and gems <= 7500 then
+    elseif item == "Large Christmas Present" and gems <= 5000 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	    processListingInfo(uid, gems, item, version, shiny, amount, username)
 
-    elseif item == "Medium Christmas Present" and gems <= 5000 then
+    elseif item == "Medium Christmas Present" and gems <= 2500 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	    processListingInfo(uid, gems, item, version, shiny, amount, username)
  
