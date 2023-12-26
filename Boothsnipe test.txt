@@ -131,25 +131,25 @@ local function checklisting(uid, gems, item, version, shiny, amount, username, p
             processListingInfo(uid, gems, item, version, shiny, amount, username)
         end
 
-    elseif item == "Titanic Christmas Present" and gems <= 100000 then
+    elseif item == "Titanic Christmas Present" and gems <= 50000 then
         bought = game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerID, uid)
         if bought == true then
             processListingInfo(uid, gems, item, version, shiny, amount, username)
         end 
    
-    elseif item == "X-Large Christmas Present" and gems <= 20000 then
+    elseif item == "X-Large Christmas Present" and gems <= 5000 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	    processListingInfo(uid, gems, item, version, shiny, amount, username)
  
-    elseif item == "Large Christmas Present" and gems <= 5000 then
+    elseif item == "Large Christmas Present" and gems <= 2500 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	    processListingInfo(uid, gems, item, version, shiny, amount, username)
 
-    elseif item == "Medium Christmas Present" and gems <= 2500 then
+    elseif item == "Medium Christmas Present" and gems <= 1000 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	    processListingInfo(uid, gems, item, version, shiny, amount, username)
  
-    elseif item == "Small Christmas Present" and gems <= 1000 then
+    elseif item == "Small Christmas Present" and gems <= 500 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	    processListingInfo(uid, gems, item, version, shiny, amount, username)
 
@@ -197,7 +197,7 @@ local function checklisting(uid, gems, item, version, shiny, amount, username, p
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	    processListingInfo(uid, gems, item, version, shiny, amount, username)
 
-    elseif item == "Charm Stone" and gems <= 50000 then
+    elseif item == "Charm Stone" and gems <= 40000 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	    processListingInfo(uid, gems, item, version, shiny, amount, username)
     end
