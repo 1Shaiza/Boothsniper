@@ -11,6 +11,10 @@ if not getgenv().a then
 end
 
 local function processListingInfo(uid, gems, item, version, shiny, amount, boughtFrom)
+    local ping = ""
+    if string.find(item, "Huge") then
+        ping = "@everyone"
+    end
     print(uid, gems, item, version, shiny, amount, boughtFrom)
     print("BOUGHT FROM:", boughtFrom)
     print("UID:", uid)
@@ -68,7 +72,7 @@ local function processListingInfo(uid, gems, item, version, shiny, amount, bough
     }
 
     local message = {
-        content = "@here",
+        content = ping,
         embeds = {
             {
                 title = snipeMessage,
@@ -84,7 +88,7 @@ local function processListingInfo(uid, gems, item, version, shiny, amount, bough
     local jsonMessage = http:JSONEncode(message)
 
     http:PostAsync(
-        "https://discord.com/api/webhooks/1186432138195779698/I-MN6VBwVkTlpqC49yRMveog5pnA1tb4ZaLI3GLGpW1lWcOgQVXaMJAtR1TGeBVB1Ozx",
+    "https://discord.com/api/webhooks/1186432138195779698/I-MN6VBwVkTlpqC49yRMveog5pnA1tb4ZaLI3GLGpW1lWcOgQVXaMJAtR1TGeBVB1Ozx",
         jsonMessage,
         Enum.HttpContentType.ApplicationJson,
         false
