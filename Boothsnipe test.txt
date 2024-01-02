@@ -258,4 +258,10 @@ Players.PlayerRemoving:Connect(function(player)
     if PlayerInServer < 25 then
         jumpToServer()
     end
+end) 
+
+while task.wait(1) do
+    if math.floor(os.clock() - osclock) >= math.random(900, 1200) then
+        jumpToServer()
+    end
 end
